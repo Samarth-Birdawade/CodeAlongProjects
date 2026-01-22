@@ -1,0 +1,56 @@
+
+intergerType = 5
+print(intergerType)
+print(type(intergerType))
+
+floatType = 3.14
+print(floatType)
+print(type(floatType))
+
+complexType = 10j
+print(complexType)
+print(type(complexType))
+
+binaryType = 0B1111
+print(bin(binaryType))
+print(type(binaryType))
+
+hexaDeciType = 0x1A
+print(hex(hexaDeciType))
+print(type(hexaDeciType))
+
+stringType = "Samarth"
+print(stringType)
+print(type(stringType))
+
+boolType = True
+print(boolType)
+print(type(boolType))
+
+# Type conversion
+print("Type Conversion Example:")
+print(intergerType)
+print(type(intergerType))
+print(float(intergerType))
+print(type(float(intergerType)))
+
+# Imp + basic String operations
+str1 = "  Samarth"
+str2 = "Birdawade  "
+str3 = str1 + " " + str2
+print(str3)
+print(str3[0])
+print(str3[0:7])
+print(str3.lower())
+print(str3.replace("Samarth", "Sam"))
+print(str3.split(" "))
+print(len(str3))
+print(str3.strip())
+print(str3.rstrip())
+print(str3.startswith("  Samarth"))
+print(str3.find("Samarth"))
+print(str3.count("a"))
+print(str3.isalpha())
+print(str3.isdigit())
+print(str3.isalnum())
+print(str3.capitalize())
