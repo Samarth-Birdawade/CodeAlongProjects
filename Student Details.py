@@ -13,14 +13,16 @@ grade_to_points = {
 }
 
 class student:
-   id = 0
-   name = ""
-   age = 0
-   grade = ""
-   marks = []
+
+   def __init__(self):
+      self.__id = None
+      self.name = None
+      self.age = None
+      self.grade = None
+      self.marks = []
 
    def set_details(self, id=1, name="Samarth", age=23, grade="A+"):
-      self.id = id
+      self.__id = id
       self.name = name
       self.age = age
       self.grade = grade
@@ -40,9 +42,12 @@ class student:
       return math.floor(percentage)
 
    def get_details(self):
-      return f"ID: {self.id}, Name: {self.name}, Age: {self.age}, Grade: {self.grade} \nPercentage: {self.grade_calculator()}%"
+      return f"ID: {self.__id}, Name: {self.name}, Age: {self.age}, Grade: {self.grade} \nPercentage: {self.grade_calculator()}%"
    
+   def __del__(self):
+      print(f"Student object with ID: {self.__id} is being deleted.")
+
 s1 = student()
 s1.set_details()
 print(s1.get_details())
-
+# print(s1._student__id) # Calling the private variable
