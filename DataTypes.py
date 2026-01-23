@@ -27,6 +27,10 @@ boolType = True
 print(boolType)
 print(type(boolType))
 
+byteType = bytes("Hello", 'utf-8')  # or we can write b"Hello"
+print(byteType)
+print(type(byteType))
+
 # Type conversion
 print("Type Conversion Example:")
 print(intergerType)

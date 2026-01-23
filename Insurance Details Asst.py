@@ -1,4 +1,4 @@
-id = 1
+ID = 1 # constant variable
 firstName = "Samarth"
 lastName = "   Birdawade   "
 phoneNo = "+91 1234567891"
@@ -10,12 +10,11 @@ print(type(billingAmount))
 billingAmount = float(billingAmount)
 print(type(billingAmount))
 
-print(f'ID: {id}, \nFirst Name: {firstName}, \nLast Name: {lastName.strip()}, \nPhone Number: {phoneNo.removeprefix("+91 ")}, \nHas Insurance: {hasInsurance}, \nBilling Amount: {billingAmount}, \nInsurance Number (last 4 digits): {insuranceNo[7:len(insuranceNo)]}')
-
+print(f'ID: {ID}, \nFirst Name: {firstName}, \nLast Name: {lastName.strip()}, \nPhone Number: {phoneNo.removeprefix("+91 ")}, \nHas Insurance: {hasInsurance}, \nBilling Amount: {billingAmount}, \nInsurance Number (last 4 digits): {insuranceNo[7:len(insuranceNo)]}')
 
 # Same Data but in JSON format
 insurance_details = {
-    "id": id,
+    "id": ID,
     "first_name": firstName,
     "last_name": lastName.strip(),
     "phone_no": phoneNo.removeprefix("+91 "),
@@ -24,5 +23,6 @@ insurance_details = {
     "insurance_no_last_4": insuranceNo[7:len(insuranceNo)]
 }
 
+# using special chars in keys and values
 for key, value in insurance_details.items():
-    print(f"{key}: {value}")
+    print(f"\"{key}\": \\|{value}|\\")
