@@ -77,8 +77,6 @@ class my_database:
       cursor.close()
       return result[0] if result else 0
 
-points_to_grade = {10: "O+", 9: "O", 8: "A+", 7: "A", 6: "B+", 5: "B", 4: "C+", 3: "C", 2: "D", 1: "F", 0: "F"}
-
 class student:
    latest_id = 1 
 
@@ -100,7 +98,26 @@ class student:
       total_marks = sum(self.marks)
       percentage = (total_marks / (len(self.marks) * 100)) * 100
       if want_grade:
-         return points_to_grade[math.floor(percentage/10)]
+         points = math.floor(percentage/10)
+         match points:
+            case 10:
+                return "O"
+            case 9:
+                return "A+"
+            case 8:
+                return "A"
+            case 7:
+                return "B+"
+            case 6:
+                return "B"
+            case 5:
+                return "C+"
+            case 4:
+                return "C"
+            case 3:
+                return "D"
+            case _:           # Covers the grade for case of 0% to 29% in marks
+                return "F"
       return percentage
 
    def get_details(self):

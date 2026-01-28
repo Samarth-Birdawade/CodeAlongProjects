@@ -28,5 +28,8 @@ def number_guessing_game():
             attempts -= 1
             print(f"Wrong guess. You have {attempts} attempts left.")
 
+    print("Oops all your guesses are wrong. Please retry your luck!")
+    
+
 if __name__ == "__main__":
     number_guessing_game()
