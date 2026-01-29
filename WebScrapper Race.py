@@ -6,7 +6,6 @@ import time
 import aiohttp
 from bs4 import BeautifulSoup as bs
 
-
 # Function to fetch data from 
 def fetch_data(url):
     response = urllib.request.urlopen(url)

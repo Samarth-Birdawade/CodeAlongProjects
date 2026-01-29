@@ -1,0 +1,11 @@
+aiohttp
+beautifulsoup4
+psycopg2
+python-dotenv
+aiohappyeyeballs
+aiosignal
+attrs
+psutil
+soupsieve
+numpy
+pandas
