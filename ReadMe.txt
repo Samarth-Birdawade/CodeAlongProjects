@@ -5,4 +5,7 @@ Open the folder in File Explorer then type 'cmd' in the address bar of the windo
 
 .venv_for_codealong\Scripts\activate
 
+To run the streamlit file - paste the following in the command line with the address of your Streamlit.py:
+streamlit run <address>/Streamlit.py
+
 """
